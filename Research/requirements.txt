@@ -1,0 +1,7 @@
+flask
+pandas
+scikit-learn
+joblib
+PyPDF2
+python-docx
+psycopg2-binary

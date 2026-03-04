@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI resume screening system</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="cantainer">
+        <h1>Prediction Result</h1>
+        <div class="result-card">
+            <p>Predicted job category:</p>
+            <h2 class="result">{{ prediction }}</h2>
+            <p>Confidence score:</p>
+            <h3>{{ confidence }}%</h3>
+       <p>Detected Skills:</p>
+
+          <ul class="skills">
+          {% for skill in skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+</ul>
+        </div>
+        <a href="/" class="back-btn">Upload another resume</a>
+        <a href="/dashboard" class="dashboard-btn">View Dashboard</a>
+    </div>
+</body>
+</html>

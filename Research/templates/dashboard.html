@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="cantainer">
+        <h1>Resume Dashboard</h1>
+        <div class="table-wrap">
+        <table border="1" width="100%">
+            <tr>
+                <th>ID</th>
+                <th>Resume Text</th>
+                <th>Prediction</th>
+                <th>Confidence</th>
+                <th>Skills</th>
+                <th>Upload Time</th>
+            </tr>
+            {% for resume in resumes %}
+            <tr>
+    <td>{{ resume[0] }}</td>
+    <td>{{ resume[1]|string|truncate(120) }}</td>
+    <td>{{ resume[2] }}</td>
+    <td>{{ resume[3] }}%</td>
+    <td>{{ resume[4] }}</td>
+    <td>{{ resume[5] }}</td>
+</tr>
+            {% endfor %}
+        </table>
+        </div>
+    </div>
+</body>
+</html>

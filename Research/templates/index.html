@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI resume screening system</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="cantainer">
+        <h1>AI resume screening system</h1>
+        <p>Upload your resume to predict the job category</p>
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <div class="upload-area">
+                <input type="file" id="resumeInput" name="resume" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+ hidden>
+                <label for="resumeInput" class="upload-box">
+                    <span class="plus" id="plusicon">+</span>
+                    <span class="pdf-icon" id="pdficon">&#128196;</span>
+                </label>
+            </div>
+            <p id="filename">No file selected</p>
+            <button type="submit">Predict category</button>
+            <a href="/dashboard" class="dashboard-btn">Open Dashboard</a>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

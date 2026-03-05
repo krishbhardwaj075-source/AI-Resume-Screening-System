@@ -6,10 +6,8 @@ from database import init_db, save_resume, all_resumes
 import os
 import joblib
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
 MODEL_PATH = os.path.join(BASE_DIR, "trained_model", "model.pkl")
 VEC_PATH = os.path.join(BASE_DIR, "trained_model", "vectorizer.pkl")
-
 model = joblib.load(MODEL_PATH)
 vectorizer = joblib.load(VEC_PATH)
 app=Flask(__name__)
@@ -18,7 +16,6 @@ base_dir=os.path.dirname(os.path.abspath(__file__))
 upload_folder=os.path.join(base_dir, "uploads")
 app.config["upload_folder"]=upload_folder
 os.makedirs(upload_folder, exist_ok=True)
-
 @app.route("/")
 def home():
     return render_template("index.html")

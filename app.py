@@ -56,7 +56,6 @@ def predict():
 def dashboard():
     resumes = all_resumes()
     return render_template("dashboard.html", resumes=resumes)
-import os
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))

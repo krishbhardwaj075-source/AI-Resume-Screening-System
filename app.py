@@ -7,8 +7,8 @@ import os
 import joblib
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-MODEL_PATH = os.path.join(BASE_DIR, "Projects/trained_model", "model.pkl")
-VEC_PATH = os.path.join(BASE_DIR, "Projects/trained_model", "vectorizer.pkl")
+MODEL_PATH = os.path.join(BASE_DIR, "trained_model", "model.pkl")
+VEC_PATH = os.path.join(BASE_DIR, "trained_model", "vectorizer.pkl")
 
 model = joblib.load(MODEL_PATH)
 vectorizer = joblib.load(VEC_PATH)

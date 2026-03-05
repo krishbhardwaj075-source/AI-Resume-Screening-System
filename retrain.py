@@ -5,7 +5,7 @@ import os
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATABASE_URL = "postgresql://postgres:PASSWORD@HOST:5432/postgres"
+DATABASE_URL = "postgresql://postgres.ahpbzivlujftjpopnebt:25%40MCI10146@aws-1-ap-south-1.pooler.supabase.com:5432/postgres"
 DATASET_PATH = os.path.join(BASE_DIR, "dataset", "Resume_screening.csv")
 MODEL_PATH = os.path.join(BASE_DIR, "trained_model", "model.pkl")
 VEC_PATH = os.path.join(BASE_DIR, "trained_model", "vectorizer.pkl")

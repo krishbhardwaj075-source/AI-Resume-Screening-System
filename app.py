@@ -5,8 +5,8 @@ from skills import extract_skills
 from database import init_db, save_resume, all_resumes
 import os
 import joblib
-model=joblib.load("Research/trained_model/model.pkl")
-vectorizer=joblib.load("Research/trained_model/vectorizer.pkl")
+model=joblib.load("trained_model/model.pkl")
+vectorizer=joblib.load("trained_model/vectorizer.pkl")
 app=Flask(__name__)
 init_db()
 base_dir=os.path.dirname(os.path.abspath(__file__))

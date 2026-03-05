@@ -19,8 +19,6 @@ os.makedirs(upload_folder, exist_ok=True)
 @app.route("/")
 def home():
     return render_template("index.html")
-
-
 @app.route("/predict", methods=["POST"])
 def predict():
     

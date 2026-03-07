@@ -6,3 +6,11 @@ PyPDF2
 python-docx
 psycopg2-binary
 gunicorn
+flask
+gunicorn
+joblib
+pandas
+psycopg2-binary
+PyPDF2
+python-docx
+scikit-learn
